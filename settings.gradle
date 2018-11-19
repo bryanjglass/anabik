@@ -1,0 +1,13 @@
+rootProject.name = 'anabik'
+
+includeDirectory(rootDir)
+
+def includeDirectory(File baseDir) {
+    baseDir.eachDir { dir ->
+        if (file(dir.path + '/build.gradle').exists()) {
+            include rootDir.toPath().relativize(dir.toPath()).toString().replaceAll('/', ':')
+            
+            includeDirectory(dir)
+        }
+    }
+}

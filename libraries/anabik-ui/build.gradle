@@ -1,0 +1,12 @@
+plugins {
+    id "com.moowork.node" version "1.2.0"
+}
+
+jar {
+    from('build/www') {
+        include '**/*'
+        into 'public'
+    }
+}
+
+processResources.dependsOn 'yarn_build'

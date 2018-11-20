@@ -7,6 +7,10 @@ buildscript {
     }
 }
 
+plugins {
+    id "com.gorylenko.gradle-git-properties" version "1.5.1"
+}
+
 subprojects {
     repositories {
         mavenCentral()
@@ -15,12 +19,14 @@ subprojects {
     apply plugin: 'java'
     apply plugin: 'eclipse'
     apply plugin: 'idea'
-
+    apply plugin: "com.gorylenko.gradle-git-properties"
+    
     sourceCompatibility = 1.8
     targetCompatibility = 1.8
 
     apply plugin: 'io.spring.dependency-management'
 
+   
     dependencyManagement {
         imports {
             mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE") {

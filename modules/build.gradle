@@ -1,10 +1,12 @@
 subprojects {
     group = 'anabik.modules'
-    
+
     apply plugin: 'org.springframework.boot'
 
     dependencies {
-        compile("org.springframework.boot:spring-boot-starter-web")
+        compile "io.micrometer:micrometer-registry-elastic:1.1.0"
+        compile "org.springframework.boot:spring-boot-starter-actuator"
+        compile "org.springframework.boot:spring-boot-starter-web"
         testCompile('org.springframework.boot:spring-boot-starter-test')
     }
 }

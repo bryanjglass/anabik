@@ -9,4 +9,12 @@ jar {
     }
 }
 
+task yarn_build(type: YarnTask) {
+    inputs.files fileTree('src')
+    inputs.files 'package.json'
+    inputs.files 'babel.config.js'
+    inputs.files 'vue.config.js'
+    inputs.files 'yarn.lock'
+    outputs.dir 'build/www'
+}
 processResources.dependsOn 'yarn_build'

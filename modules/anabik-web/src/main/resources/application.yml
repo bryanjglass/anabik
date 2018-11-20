@@ -1,3 +1,11 @@
 anabik:
   elasticsearch:
     host: localhost:9200
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

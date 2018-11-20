@@ -1,6 +1,7 @@
-subprojects { project ->
+subprojects {
+    group = 'anabik.modules'
+    
     apply plugin: 'org.springframework.boot'
-    apply plugin: 'io.spring.dependency-management'
 
     dependencies {
         compile("org.springframework.boot:spring-boot-starter-web")

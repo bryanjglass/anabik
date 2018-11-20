@@ -1,3 +1,4 @@
 dependencies {
     compile project(':libraries:anabik-ui')
+    compile project(':libraries:anabik-elasticsearch')
 }

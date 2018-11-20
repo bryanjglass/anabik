@@ -1,0 +1,3 @@
+anabik:
+  elasticsearch:
+    host: localhost:9200

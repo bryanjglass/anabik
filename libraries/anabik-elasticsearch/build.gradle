@@ -1,0 +1,6 @@
+dependencies {
+    compile(project(':libraries:anabik-core'))
+    compile('org.springframework.boot:spring-boot-starter')
+    compile('org.elasticsearch.client:elasticsearch-rest-high-level-client:6.5.0')
+    compile('com.google.guava:guava:27.0-jre')
+}

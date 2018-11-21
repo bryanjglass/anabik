@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.0.5.RELEASE")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:2.1.0.RELEASE")
     }
 }
 
@@ -25,17 +25,19 @@ subprojects {
     targetCompatibility = 1.8
 
     apply plugin: 'io.spring.dependency-management'
-
-   
+    
+    ext['elasticsearch.version'] = '6.5.0'
+    
     dependencyManagement {
         imports {
-            mavenBom("org.springframework.boot:spring-boot-dependencies:2.0.5.RELEASE") {
-                bomProperty 'elasticsearch.version', '6.5.0'
+            mavenBom("org.springframework.boot:spring-boot-dependencies:2.1.0.RELEASE") {
+                
             }
         }
 
         dependencies {
             dependency 'org.elasticsearch:elasticsearch:6.5.0'
+            dependency 'org.elasticsearch:elasticsearch-rest-high-level-client:6.5.0'
         }
     }
 }

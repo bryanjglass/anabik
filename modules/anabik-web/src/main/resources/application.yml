@@ -9,3 +9,7 @@ management:
   endpoint:
     health:
       show-details: always
+  metrics:
+    export:
+      elastic:
+        enabled: true

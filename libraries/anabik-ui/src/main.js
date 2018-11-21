@@ -2,6 +2,7 @@ import Vue from 'vue';
 import BootstrapVue from 'bootstrap-vue';
 import router from './router';
 import App from './App.vue';
+import './config/notifications';
 
 Vue.use(BootstrapVue);
 

@@ -4,10 +4,10 @@ export default {
             name: 'Dashboard',
             url: '/dashboard',
             icon: 'icon-speedometer',
-            badge: {
-                variant: 'primary',
-                text: 'NEW'
-            }
+            // badge: {
+            //     variant: 'primary',
+            //     text: 'NEW'
+            // }
         },
         {
             title: true,
@@ -20,7 +20,7 @@ export default {
         },
         {
             name: 'Search',
-            url: '/theme/colors',
+            url: '/search',
             icon: 'icon-magnifier'
         },
         {

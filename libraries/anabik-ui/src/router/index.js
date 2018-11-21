@@ -3,6 +3,8 @@ import Router from 'vue-router';
 
 import DefaultContainer from '@/containers/DefaultContainer.vue';
 import Dashboard from '@/views/Dashboard.vue';
+import Search from '@/views/Search.vue';
+
 Vue.use(Router);
 
 export default new Router({
@@ -16,7 +18,12 @@ export default new Router({
         component: DefaultContainer,
         children: [{
             path: '/dashboard',
+            name: 'Dashboard',
             component: Dashboard
+        }, {
+            path: '/search',
+            name: 'Search',
+            component: Search
         }]
     }, ]
 });
